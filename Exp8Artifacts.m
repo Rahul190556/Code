@@ -63,7 +63,6 @@ W0 = fc_line / (fs / 2); % W0 is normalized by Nyquist frequency
 BW = W0 / Q_factor; % BW is related to Q-factor
 [b_notch, a_notch] = iirnotch(W0, BW); 
 ecg_no_interference = filtfilt(b_notch, a_notch, ecg_filtered);
-q6666666666666666666666666666666666666666666666666666666666666666666666666666666666666
 % Plot the ECG after powerline interference removal
 subplot(3,2,4)
 plot(t, ecg_no_interference);
